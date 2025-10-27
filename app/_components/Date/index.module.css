@@ -1,0 +1,15 @@
+.tag {
+  background-color: var(--color-bg-sub);
+  padding: 2px 12px;
+  border-radius: var(--border-radius);
+  white-space: nowrap;
+  font-size: 1rem;
+}
+
+.data {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0.8rem 0;
+  font-size: 1rem;
+}
