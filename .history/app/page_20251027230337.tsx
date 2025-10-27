@@ -6,10 +6,8 @@ import { TOP_NEWS_LIMIT } from "@/app/_constants";
 import NewsList from "@/app/_components/NewsList";
 import ButtonLink from "@/app/_components/ButtonLink";
 
-export default async function Home() {
-  const data = await getNewsList({
-    limit: TOP_NEWS_LIMIT,
-  });
+export default function Home() {
+  const sliceData = data.contents.slice(0, 2);
   return (
     <>
       <section className={styles.top}>
@@ -27,7 +25,7 @@ export default async function Home() {
       </section>
       <section className={styles.news}>
         <h2 className={styles.newsTitle}>News</h2>
-        <NewsList news={data.contents} />
+        <NewsList news={sliceData} />
         <div className={styles.newsLink}>
           <ButtonLink href="/news">もっと見る</ButtonLink>
         </div>
